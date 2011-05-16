@@ -1,5 +1,5 @@
 Collapp::Application.routes.draw do
   resources :users
-  
-  root :to => "users#index"
+  match ':controller(/:action(/:id(.:format)))'
+  root :to => 'message#welcome'
 end
